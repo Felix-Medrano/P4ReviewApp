@@ -272,4 +272,7 @@ pnpm-lock.yaml
 # Windows shortcuts
 *.lnk
 
+# Scripts
+[Ss]cripts/
+
 # End of .gitignore
