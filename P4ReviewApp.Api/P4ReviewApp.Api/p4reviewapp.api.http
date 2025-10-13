@@ -1,0 +1,6 @@
+@p4reviewapp.api_HostAddress = http://localhost:5215
+
+GET {{p4reviewapp.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
