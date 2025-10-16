@@ -178,7 +178,8 @@ DocProject/Help/html
 publish
 
 # Publish Web Output
-*.[Pp]ublish.xml
+*.Publish.xml
+*.publish.xml
 *.azurePubxml
 # Note: Comment the next line if you want to checkin your web deploy settings,
 # but database connection strings (with potential passwords) will be unencrypted
@@ -207,9 +208,11 @@ _pkginfo.txt
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
-*.[Cc]ache
+*.Cache
+*.cache
 # but keep track of directories ending in .cache
-!*.[Cc]ache/
+!*.Cache/
+!*.cache/
 
 # Others
 ClientBin
@@ -390,6 +393,7 @@ pnpm-lock.yaml
 # IDE Specific
 .idea
 .vscode
+*.code-workspace
 
 # OS Specific
 .DS_Store
