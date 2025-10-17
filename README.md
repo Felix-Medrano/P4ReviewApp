@@ -65,4 +65,14 @@ Both the **API** and **Web** projects were created from their respective default
 
 ---
 
+## ✒️ Resource Attribution
+
+### **Application Icons**
+- **Favicon & App Icons:** The application icons were obtained from [Flaticon](https://www.flaticon.es/icono-gratis/customer-review_9490135), created by [Freepik](https://www.flaticon.com/authors/freepik). This includes:
+  - `favicon.ico` (multi-size: 16x16, 24x24, 32x32, 48x48, 64x64)
+  - `icon-192.png` (for PWA and mobile devices)
+  - `icon-512.png` (high density and 4K displays)
+
+---
+
 > _Repository initialized as the foundation for future integration between Perforce review management and a collaborative web environment._
