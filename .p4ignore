@@ -406,4 +406,5 @@ yarn-error.log*
 lerna-debug.log*
 
 #Scripts
+*.bat
 Scripts/

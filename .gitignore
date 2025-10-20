@@ -274,6 +274,7 @@ pnpm-lock.yaml
 *.lnk
 
 # Scripts
+*.bat
 [Ss]cripts/
 
 # End of .gitignore
