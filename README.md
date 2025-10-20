@@ -111,6 +111,7 @@ This workflow ensures **robust synchronization** between Perforce and GitHub.
   - `favicon.ico` (multi-size: 16x16, 24x24, 32x32, 48x48, 64x64)
   - `icon-192.png` (for PWA and mobile devices)
   - `icon-512.png` (high density and 4K displays)
+- **Default Avatar:** The image(512x512) were obtained from [Flaticon](https://www.flaticon.es/icono-gratis/customer-review_4651823), created by [Freepik](https://www.flaticon.es/autores/juicy-freepik).
 
 ---
 
