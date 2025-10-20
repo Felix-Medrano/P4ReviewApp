@@ -1,5 +1,7 @@
 # 🧩 P4ReviewApp
 
+> IMPORTANT: This repository is an educational, workspace-specific reference. It is not intended as a turnkey project for reproduction on other machines or environments. The code, configuration, and workflow documented here reflect a local Perforce-centric setup and certain environment-specific assumptions that may not work or be appropriate outside the original development workspace. Treat examples and scripts as illustrative rather than production-ready; reproduce at your own discretion and adapt configurations before using in a different environment.
+
 **P4ReviewApp** is a project inspired by **Helix Swarm**, designed to manage and review *Change Lists* from Perforce (**P4**) through a modern web interface and a .NET-based REST API.
 
 ---
@@ -15,60 +17,97 @@ This repository currently contains the initial setup of two main projects — re
 
 ---
 
-## 🚀 Current Project Status
+## 🧭 Development Roadmap
 
-- **Stage:** Project initialization  
-- **Progress:** Base templates created for both API and Web frontend  
-- **Next Steps:**  
-  - Implement backend endpoints and data models  
-  - Connect frontend to API  
-  - Add user authentication and review workflows  
+For detailed progress tracking and upcoming tasks, visit the Trello board:  
+🔗 [P4ReviewApp Development Board](https://trello.com/b/In1bhMxc/p4-revoew-app)
+
+> **Note:**  
+> This section officially replaces the former **“Current Project Status”** block.  
+> The change was made to improve practicality and transparency, allowing project updates, milestones, and ongoing tasks to be managed dynamically through the Trello board rather than manual edits in this document.
 
 ---
 
 ## 🌿 Branch Information
 
-- **`main`** → The stable branch containing the latest verified version of both backend and frontend.  
-  This branch serves as the deployment base and represents synchronized changes from the local P4 workspace.
+- **`main`** → Stable branch containing the latest verified version of both backend and frontend.
+  This branch mirrors synchronized changes from the **local Perforce (P4)** workspace after validation.
+  It represents the **production-ready state** of the project, updated via the synchronization workflow.
 
 ---
 
-## 🔄 Local Development & Synchronization Flow
+## 🔄 Workflow: Perforce to GitHub Synchronization
 
-The project is primarily developed and maintained in **Perforce (P4)**, while **GitHub** is used as a synchronized public mirror for tracking and documentation purposes.
+### 🧱 Development Workflow
 
-### Workflow Overview
-1. All development takes place in a **local P4 workspace**.  
-2. When changes are completed and validated, they are **submitted locally in P4**.  
-3. A custom synchronization script — **`P4ReviewAppGit.bat`** — is then executed.  
-   This script automatically:
-   - Pulls the latest Git changes (if any)  
-   - Copies or commits updated files from the P4 workspace  
-   - Pushes the synchronized changes to the **GitHub repository**
+#### **Phase 1: Local Development in Perforce**
+- All development activities occur within a **local Perforce (P4) workspace**.
+- Developers work on files, make changes, and validate functionality locally.
+- Once changes are completed and tested, they are **submitted to Perforce**.
 
-This hybrid workflow allows maintaining the **speed and control of P4** for day-to-day development, while ensuring **visibility, version history, and backup** on GitHub.
+#### **Phase 2: Automated Synchronization Process**
+Upon successful submission in Perforce, a server-side trigger runs the **`P4ReviewAppGit.bat`** script, which handles synchronization to GitHub through the following automated steps:
+
+### ⚙️ Synchronization Script Execution
+
+#### **1. Environment Configuration**
+- Validates the provided changelist number and retrieves its complete description.
+
+#### **2. Change Detection & Validation**
+- Verifies the existence of modified files within the Git environment.
+
+#### **3. Commit Preparation**
+- Generates a commit message following the standardized convention:
+  ```
+  P4 CL <number>: <first line of changelist description>
+  <remaining changelist description>
+  ```
+- Maintains complete traceability between **P4 changelists** and **GitHub commits**.
+
+#### **4. Repository Update**
+- Executes the commit with the prepared message.
+- Pushes the changes to the **GitHub repository (`main` branch)**.
+
+### 🚀 Workflow Characteristics
+
+#### ✅ **Benefits**
+- **Optimized Repository Management:** Maintains a clean, well-structured history in GitHub.
+- **Automated Traceability:** Each GitHub commit directly references its corresponding P4 changelist.
+- **Streamlined Process:** Reduces manual synchronization efforts and potential human error.
+- **Consistent Documentation:** Standardized commit messages improve readability and tracking.
+
+#### ⚠️ **Considerations**
+- **Non-Parallel Committing:** A single P4 submit may bundle multiple changes into one GitHub commit.
+- **Change Management:** Developers should maintain focused file modifications to prevent unintended syncs.
+- **Selective Synchronization:** Only files actively worked on should be modified to avoid unnecessary updates.
+
+### 🔧 Future Enhancements
+We are actively exploring solutions to implement **parallel commit capabilities** between P4 and GitHub, allowing for more granular synchronization and enhanced change tracking.
+
+### 🧭 Best Practices
+- Keep changelist descriptions **clear and comprehensive**.
+- Maintain **focused work** within specific file sets.
+- Validate all changes locally before submitting to Perforce. 
+- Monitor synchronization results to ensure expected outcomes.
+
+This workflow ensures **robust synchronization** between Perforce and GitHub.
 
 ---
 
 ## 🛠️ Technologies
 
-- **Backend:** ASP.NET Core 8 Web API  
-- **Frontend:** React + TypeScript  
-- **Version Control:** Perforce (P4) for local development + GitHub for remote sync  
-
----
-
-## 📅 Notes
-
-This marks the **beginning of development** for P4ReviewApp.  
-Both the **API** and **Web** projects were created from their respective default templates in Visual Studio 2022 (with HTTPS enabled).
+- **Backend:** ASP.NET Core 8 Web API
+- **Frontend:** React + TypeScript
+- **Version Control:** Perforce (P4) for local development + GitHub for remote sync
+- **Internationalization:** i18next integration with automatic language detection
+- **AI:** AI tools (such as ChatGPT, Deepseek) to complement development, accelerate deployment, and improve efficiency.
 
 ---
 
 ## ✒️ Resource Attribution
 
 ### **Application Icons**
-- **Favicon & App Icons:** The application icons were obtained from [Flaticon](https://www.flaticon.es/icono-gratis/customer-review_9490135), created by [Freepik](https://www.flaticon.com/authors/freepik). This includes:
+- **Favicon & App Icons:** The application icons were obtained from [Flaticon](https://www.flaticon.es/icono-gratis/customer-review_9490135), created by [juicy-fish](https://www.flaticon.es/autores/juicy-fish). This includes:
   - `favicon.ico` (multi-size: 16x16, 24x24, 32x32, 48x48, 64x64)
   - `icon-192.png` (for PWA and mobile devices)
   - `icon-512.png` (high density and 4K displays)
