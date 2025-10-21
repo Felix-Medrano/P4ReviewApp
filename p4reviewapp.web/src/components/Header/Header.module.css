@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F9F1;
+  color: black;
+  padding: 10px 20px;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.appName {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.reviews {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.button {
+  background-color: #2C7A7B;
+  color: white;
+  border: 1px solid #319795;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:active, .button:hover{
+  background-color: #234E52;
+  color: white;
+}

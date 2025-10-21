@@ -1,22 +1,27 @@
-import React from 'react';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 import { useTranslation } from 'react-i18next';
-import './config/i18n/i18n'; // Importar la configuración
+import { User } from './components/Header/Header.types';
+import './config/i18n/i18n';
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const [user, setUser] = useState<User | null>(null);
 
-  const switchLanguage = () => {
-    // Cambia entre español e inglés
-    const newLang = i18n.language === 'es' ? 'en' : 'es';
-    i18n.changeLanguage(newLang);
-  };
+  const handleLogin = () => setUser({ name: 'Felix', avatar: 'assets/avatars/defaultAvatar.png' });
+  const handleLogout = () => setUser(null);
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>{t('welcome')}</h1>
-      <p>{t("currentLanguage")}: <strong>{i18n.language}</strong></p>
-      <p>{t('test')}</p>
-    </div>
+    <Router>
+      <Header user={user} onLogin={handleLogin} onLogout={handleLogout} />
+      <main style={{ padding: 20 }}>
+        <Routes>
+          <Route path="/dashboard" element={<div>{t('dashboard')}</div>} />
+          <Route path="/reviews" element={<div>{t('myReviews')}</div>} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 

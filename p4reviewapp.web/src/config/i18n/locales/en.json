@@ -1,5 +1,5 @@
 {
-  "welcome": "Welcome to my App!",
-  "currentLanguage": "Current Language",
-  "test": "This is a test string."
+  "appName": "P4 Review App",
+  "login": "Login",
+  "logout": "Logout"
 }
