@@ -106,12 +106,13 @@ This workflow ensures **robust synchronization** between Perforce and GitHub.
 
 ## ✒️ Resource Attribution
 
-### **Application Icons**
+### **Application Icons/Images**
 - **Favicon & App Icons:** The application icons were obtained from [Flaticon](https://www.flaticon.es/icono-gratis/customer-review_9490135), created by [juicy-fish](https://www.flaticon.es/autores/juicy-fish). This includes:
   - `favicon.ico` (multi-size: 16x16, 24x24, 32x32, 48x48, 64x64)
   - `icon-192.png` (for PWA and mobile devices)
   - `icon-512.png` (high density and 4K displays)
 - **Default Avatar:** The image(512x512) were obtained from [Flaticon](https://www.flaticon.es/icono-gratis/customer-review_4651823), created by [Freepik](https://www.flaticon.es/autores/juicy-freepik).
+- **Home Banner:** The image was created with [Sora](https://sora.chatgpt.com/g/gen_01k821d31he89bhdxxez8dk0aw), converted from .png to .webp with [shutterstock](https://www.shutterstock.com/es/image-converter/png-to-webp).
 
 ---
 
