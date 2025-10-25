@@ -1,5 +1,16 @@
 {
   "appName": "P4 Review App",
   "login": "Iniciar sesión",
-  "logout": "Cerrar sesión"
+  "logout": "Cerrar sesión",
+  "homeHeroTitle": "Bienvenido a P4 Review App",
+  "homeHeroText": "P4 Review App ayuda a los equipos a gestionar las revisiones de código de forma eficiente y a mantenerse informados con noticias y actualizaciones importantes.",
+  "homeKeyFeaturesTittle": "Caracteristicas Clave",
+  "homeKeyFeaturesSlogan": "Todo lo que necesitas para enviar mejor código, más rápido y seguro",
+  "homeKeyFeaturesText": "P4 Review App ofrece una gama de funciones diseñadas para mejorar tu experiencia de revisión de\n código y mantener a tu equipo conectado.",
+  "cardOneTitle": "Solicitud de reviciones eficientes",
+  "cardOneText": "Envia y gestiona solicitudes de revision de codigo de forma rapida y sencilla.",
+  "cardTwoTitle": "Transmisiones de noticias en tiempo real",
+  "cardTwoText": "Mantente al día con noticias importantes, anuncios y actualizaciones de tu equipo.",
+  "cardThreeTitle": "Colaboración en equipo",
+  "cardThreeText": "Fomenta la colaboración y la comunicación dentro de tu equipo a través de herramientas de revisión integradas."
 }

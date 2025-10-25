@@ -1,5 +1,16 @@
 {
   "appName": "P4 Review App",
   "login": "Login",
-  "logout": "Logout"
+  "logout": "Logout",
+  "homeHeroTitle": "Welcome to P4 Review App",
+  "homeHeroText": "P4 Review App helps teams manage code reviews efficiently and stay informed with important news and updates.",
+  "homeKeyFeaturesTittle": "Key Features",
+  "homeKeyFeaturesSlogan": "Everything you need to ship better code, faster and safer",
+  "homeKeyFeaturesText": "P4 Review App offers a range of features designed to enhance your\n code review experience and keep your team connected.",
+  "cardOneTitle": "Efficient Review Requests",
+  "cardOneText": "Send and manage code review requests quickly and easily.",
+  "cardTwoTitle": "Real-time News and Announcements",
+  "cardTwoText": "Stay up-to-date with important news, announcements, and updates from your team.",
+  "cardThreeTitle": "Team Collaboration",
+  "cardThreeText": "Promote collaboration and communication within your team through integrated review tools."
 }
